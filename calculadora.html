@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+ // Solicitar la operación
+let operación = "¿Qué operación quieres realizar? Ingresa '+', '-', '*', '/'";
+let operador = prompt(operación);
+
+// Solicitar los números y convertirlos a número (flotante para mayor precisión)
+let num1 = parseFloat(prompt("Ingresa el primer número"));
+let num2 = parseFloat(prompt("Ingresa el segundo número"));
+
+// Verificar la entrada
+if (isNaN(num1) || isNaN(num2)) {
+    console.log("Por favor ingresa números válidos.");
+} else {
+    // Realizar la operación según el operador ingresado
+    if (operador == '+') {
+        let suma = num1 + num2;
+        console.log('El resultado de la suma es: ' + suma);
+        console.log('El resultado de la suma es: ' , suma);
+        console.log(`El resultado de la suma es: ${suma} muy bien`);
+
+    } else if (operador == '-') {
+        let resta = num1 - num2;
+        console.log(`El resultado de la resta es: ${resta}`);
+    } else if (operador == '*') {
+        let multiplicacion = num1 * num2;
+        console.log(`El resultado de la multiplicación es: ${multiplicacion}`);
+    } else if (operador == '/') {
+        if (num2 !== 0) { // Evitar división entre cero
+            let division = num1 / num2;
+            console.log(`El resultado de la división es: ${division}`);
+        } else {
+            console.log("No se puede dividir entre cero.");
+        }
+    } else {
+        console.log("No has ingresado una operación válida.");
+    }
+
+    console.log(`El tipo de datos del operador es: ${typeof operador}`);
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>
